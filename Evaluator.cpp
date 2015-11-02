@@ -7,7 +7,7 @@ using namespace std;
 const string Evaluator::OPERATORS = "|&e#>f<d+-*/%^ndi!()[]{}";
 const int Evaluator::PRECEDENCE[] = {1, 2, 3, 3, 4, 4, 4, 4, 5, 5, 6, 6, 6, 7, 8, 8, 8, 8, -1, -1, -1, -1, -1, -1};
 
-void Evaluator::eval(string literal_infix_expression){
+void Evaluator::eval(string literal_infix_expression):infix_expression(literal_infix_expression){
 	postfix_expression = convert_to_postfix(literal_infix_expression);
 
 	while(!operand_stack.empty())

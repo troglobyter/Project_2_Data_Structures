@@ -7,7 +7,7 @@ class Evaluator{
 	static const int PRECEDENCE[];
 
 	public:
-	int eval(string literal_infix_expression);
+	int eval(const string literal_infix_expression);
 
 	private:
 	void eval_oper(char oper);
@@ -18,6 +18,7 @@ class Evaluator{
 	int precedence(char op) const;
 
 	string postfix_expression;
+	string infix_expression;
 	
 	stack<char> operator_stack;
 	stack<int> operand_stack;
